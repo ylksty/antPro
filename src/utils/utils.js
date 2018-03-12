@@ -93,7 +93,15 @@ export function digitUppercase(n) {
   return s.replace(/(零.)*零元/, '元').replace(/(零.)+/g, '零').replace(/^整$/, '零元整');
 }
 
-
+/**
+ * str1 是否 str2 的父
+ * @param str1
+ * @param str2
+ * @returns {number}
+ * str1 是 str2 的父 2
+ * str2 是 str1 的父 1
+ * 其他 3
+ */
 function getRelation(str1, str2) {
   if (str1 === str2) {
     console.warn('Two path are equal!');  // eslint-disable-line
