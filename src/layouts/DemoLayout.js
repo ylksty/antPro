@@ -1,23 +1,23 @@
 import React from 'react';
 
-import createHistory from 'history/createBrowserHistory'
+import createHistory from 'history/createBrowserHistory';
 
 import { connect } from 'dva';
 
-import { ConnectedRouter } from 'react-router-redux'
+import { ConnectedRouter } from 'react-router-redux';
 
-import { Route } from 'react-router'
+import { Route } from 'react-router';
 
-const history = createHistory()
+const history = createHistory();
 
 function Home() {
-  return <div>home</div>
+  return <div>home</div>;
 }
 function About() {
-  return <div>About</div>
+  return <div>About</div>;
 }
 function Topics() {
-  return <div>Topics</div>
+  return <div>Topics</div>;
 }
 
 class DemoLayout extends React.PureComponent {
@@ -27,9 +27,9 @@ class DemoLayout extends React.PureComponent {
         <div>
           <a href="/demo">home</a>
           <a href="/about">about</a>
-          <Route exact path="/demo" component={Home}/>
-          <Route path="/about" component={About}/>
-          <Route path="/topics" component={Topics}/>
+          <Route exact path="/demo" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/topics" component={Topics} />
         </div>
       </ConnectedRouter>
     );
