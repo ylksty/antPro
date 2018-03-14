@@ -8,6 +8,8 @@ import { ConnectedRouter } from 'react-router-redux';
 
 import { Route } from 'react-router';
 
+// import pathToRegexp from 'path-to-regexp';
+
 const history = createHistory();
 
 function Home() {
@@ -22,6 +24,11 @@ function Topics() {
 
 class DemoLayout extends React.PureComponent {
   render() {
+    // let pathRegexp = pathToRegexp('/user/:id');
+    // console.log(pathRegexp);
+    // console.log(pathRegexp.test('/user/abc'));
+    // console.log(pathRegexp.test('/users/abc'));
+
     return (
       <ConnectedRouter history={history}>
         <div>
